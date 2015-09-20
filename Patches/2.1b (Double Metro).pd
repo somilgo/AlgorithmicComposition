@@ -1,0 +1,109 @@
+#N canvas 0 1 1366 685 10;
+#X obj 129 243 noteout;
+#X obj 207 198 makenote;
+#X obj 384 30 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 0 256;
+#X obj 24 9 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 35 198 print;
+#X obj 24 29 metro;
+#X msg 17 -99 stop;
+#X obj 42 109 drunk;
+#X obj 94 155 tabread;
+#X msg 93 109 set Cmajor;
+#X msg -83 311 \; Cmajor 0 48 50 52 53 55 57 59 60 62 64 65 67 69 71
+72 74 76 77 79 81 83 84 86 88 89 91 93 95 96;
+#X obj 233 167 + 90;
+#X obj 224 109 random 40;
+#X obj 261 9 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 382 109 tabread;
+#X msg 467 57 set Times;
+#X obj 4 144 random 27;
+#X obj -56 109 send m;
+#X obj 434 198 send t;
+#X obj 281 198 send v;
+#X obj 774 243 makenote;
+#X obj 847 167 receive v;
+#X obj 758 109 tabread;
+#X obj 724 57 drunk;
+#X obj 659 30 receive m;
+#X msg 760 357 \; CmajorBass 0 36 38 40 41 43 45 47 48 50 52 53 55
+57 59 60;
+#X msg 821 77 set CmajorBass;
+#X msg 335 313 \; Times 0 0 500 500 500 500 1000 1000 2000 2000 1000
+1000 500 500 500;
+#X msg 701 455 \; BassTimes 0 0 500 500 500 500 1000 1000 2000 2000
+1000 1000 500 500 500;
+#X obj 972 198 tabread;
+#X msg 1069 144 set BassTimes;
+#X obj 1022 57 receive t;
+#X obj 760 335 table CmajorBass 15;
+#X obj 371 269 table Times 14;
+#X obj 959 144 random 14;
+#X obj 737 434 table BassTimes 14;
+#X obj 1052 243 print;
+#X obj 760 313 noteout 2;
+#X obj -83 289 table Cmajor 29;
+#X msg 67 421 \; BbBlues 0 46 49 51 52 53 56 58 61 63 64 65 68 70 73
+75 76 77 80 82 85 87 88 89 92 94;
+#X obj 67 399 table BbBlues 25;
+#X msg 146 144 set BbBlues;
+#X msg 744 536 \; BbBluesBass 0 34 37 39 40 41 44 46 49 51 52 53 56
+58;
+#X obj 744 514 table BbBluesBass 13;
+#X msg 792 30 set BbBluesBass;
+#X msg 101 57 13 27 4;
+#X msg 770 9 7 15 4;
+#X obj 341 77 random 12;
+#X obj 19 237 tabwrite~ array1;
+#X obj 74 -3 + 200;
+#X obj 43 -66 metro;
+#X obj 88 -35 drunk;
+#X msg 136 -70 100 200 10;
+#X obj 74 -95 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 65 256;
+#X connect 1 0 0 0;
+#X connect 1 1 0 1;
+#X connect 3 0 5 0;
+#X connect 3 0 50 0;
+#X connect 5 0 7 0;
+#X connect 5 0 12 0;
+#X connect 5 0 16 0;
+#X connect 5 0 17 0;
+#X connect 5 0 47 0;
+#X connect 5 0 48 0;
+#X connect 6 0 5 0;
+#X connect 6 0 50 0;
+#X connect 7 0 8 0;
+#X connect 7 0 48 0;
+#X connect 8 0 1 0;
+#X connect 9 0 8 0;
+#X connect 11 0 1 1;
+#X connect 11 0 19 0;
+#X connect 12 0 11 0;
+#X connect 14 0 1 2;
+#X connect 14 0 18 0;
+#X connect 15 0 14 0;
+#X connect 20 0 37 0;
+#X connect 20 1 37 1;
+#X connect 21 0 20 1;
+#X connect 22 0 20 0;
+#X connect 23 0 22 0;
+#X connect 24 0 23 0;
+#X connect 24 0 34 0;
+#X connect 26 0 22 0;
+#X connect 29 0 20 2;
+#X connect 30 0 29 0;
+#X connect 34 0 29 0;
+#X connect 41 0 8 0;
+#X connect 44 0 22 0;
+#X connect 45 0 7 0;
+#X connect 46 0 23 0;
+#X connect 47 0 14 0;
+#X connect 49 0 5 1;
+#X connect 49 0 4 0;
+#X connect 50 0 51 0;
+#X connect 51 0 49 0;
+#X connect 52 0 51 0;
+#X connect 53 0 50 1;

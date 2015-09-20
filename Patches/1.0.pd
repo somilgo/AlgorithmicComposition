@@ -1,0 +1,14 @@
+#N canvas 0 0 382 229 10;
+#X obj 105 115 noteout;
+#X obj 103 71 makenote;
+#X obj 100 24 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 100 256;
+#X obj 29 44 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 100 256;
+#X obj 182 21 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -262144 -1 -1 250 256;
+#X connect 1 0 0 0;
+#X connect 1 1 0 1;
+#X connect 2 0 1 1;
+#X connect 3 0 1 0;
+#X connect 4 0 1 2;
